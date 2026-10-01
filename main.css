@@ -1,0 +1,346 @@
+/* ================================
+   KSRTC BUS BOOKING - STYLE SHEET
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+    color: #333;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    background: #c62828;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header span {
+    font-size: 15px;
+}
+
+/* ---------- Hero Section ---------- */
+
+.hero {
+    min-height: 430px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("bus.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+/* ---------- Booking Box ---------- */
+
+.booking-box {
+    width: 100%;
+    max-width: 1000px;
+
+    background: #ffffff;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.booking-box h2 {
+    text-align: center;
+    color: #c62828;
+
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+/* ---------- Trip Type ---------- */
+
+.trip-type {
+    display: flex;
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+.trip-type label {
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.trip-type input {
+    margin-right: 6px;
+}
+
+/* ---------- Form ---------- */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    background: white;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #c62828;
+
+    box-shadow:
+        0 0 0 2px rgba(198, 40, 40, 0.1);
+}
+
+/* ---------- Search Button ---------- */
+
+.search-btn {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #c62828;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    background: #a91f1f;
+
+    transform: translateY(-1px);
+}
+
+/* ---------- Results Section ---------- */
+
+.results {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 35px auto;
+
+    padding: 0 20px;
+}
+
+.results h2 {
+    color: #333;
+
+    margin-bottom: 15px;
+}
+
+/* ---------- Bus Card ---------- */
+
+.bus-card {
+    background: white;
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+
+.bus-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.bus-info h3 {
+    color: #c62828;
+
+    margin-bottom: 10px;
+}
+
+.bus-info p {
+    color: #555;
+
+    margin: 5px 0;
+
+    font-size: 14px;
+}
+
+/* ---------- Book Button ---------- */
+
+.book-btn {
+    background: #198754;
+
+    color: white;
+
+    border: none;
+
+    padding: 11px 22px;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    background: #146c43;
+
+    transform: scale(1.03);
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    background: #222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 40px;
+
+    font-size: 14px;
+}
+
+/* ---------- Responsive Design ---------- */
+
+@media (max-width: 900px) {
+
+    .form-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px 5%;
+
+        flex-direction: column;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .hero {
+        padding: 15px;
+
+        min-height: 500px;
+    }
+
+    .booking-box {
+        padding: 20px;
+    }
+
+    .booking-box h2 {
+        font-size: 22px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .trip-type {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .bus-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .book-btn {
+        width: 100%;
+    }
+
+}
